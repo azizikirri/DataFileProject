@@ -12,6 +12,8 @@ from matplotlib.backends.backend_agg import FigureCanvasAgg as FigureCanvas
 from matplotlib.figure import Figure
 import base64
 from matplotlib import pyplot as plt
+from jinja2 import Markup, escape
+
 import seaborn as sns
 #from tkinter import Tk
 #import tkinter as tk 
