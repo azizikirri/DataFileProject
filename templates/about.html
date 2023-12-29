@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title> Découvrez Notre Projet d'Exploration et de Visualisation de Données</title>
+        <link rel="stylesheet" href="{{ url_for('static', filename='about.css') }}">
+    </head>
+    <body>
+        
+        <div class="slider">
+            <div class="item">
+                <h1><u>Génération de PDF</u></h1>
+               Notre projet prend en charge la génération instantanée de rapports PDF. Les utilisateurs peuvent télécharger des données spécifiques ou des ensembles de données entiers au format PDF. Cette fonctionnalité est mise en œuvre à l'aide de la bibliothèque ReportLab, permettant aux utilisateurs d'obtenir des rapports détaillés et formatés pour leurs analyses.
+            </div>
+            <div class="item">
+                <h1 class="inté"><u>Intégration de la Base de Données</u></h1>
+               <p class="myp"> Le projet exploite MongoDB comme base de données backend pour stocker et organiser les ensembles de données. En utilisant la bibliothèque PyMongo, nous établissons une connexion à l'instance MongoDB, facilitant la récupération et la manipulation des données de manière transparente. Ce choix assure une extensibilité et une flexibilité dans le traitement de divers ensembles de données.</p>
+            </div>
+            <div class="item">
+                <h1><u>Initialisation des Données</u></h1>
+                Lors de l'initialisation du projet, un fichier Excel contenant des entrées de jeu de données initiales est lu et traité à l'aide de la bibliothèque Pandas. Les données sont ensuite transformées en un format de dictionnaire et insérées dans la collection MongoDB. Cette configuration unique garantit une base de données peuplée dès le lancement du projet.
+            </div>
+            <div class="item">
+                <h1><u>Présentation du Projet</u></h1>
+               <p class="myp">Notre projet est un système complet de visualisation et de récupération de données développé à l'aide de Flask, un puissant framework web en Python. Le système s'intègre de manière transparente à une base de données MongoDB pour stocker et gérer les ensembles de données de manière efficace. L'objectif est de fournir aux utilisateurs une interface conviviale pour explorer, télécharger et analyser les données de manière pratique.</p> 
+            </div>
+            <div class="item">
+                <h1><u>Interface Utilisateur</u></h1>
+               <p class="myp">L'interface web, propulsée par Flask, offre une expérience utilisateur propre et intuitive. Les utilisateurs peuvent effectuer diverses actions, notamment la recherche d'entrées de données spécifiques, la visualisation d'ensembles de données à travers des graphiques et le téléchargement de données sous forme de tableaux et de fichiers PDF. L'interface est conçue pour être réactive et accessible.</p> 
+            </div>
+            <div class="item">
+                <h1><u>Fonctionnalité de Recherche</u></h1>
+                Le système intègre une fonctionnalité de recherche robuste permettant aux utilisateurs d'interroger la base de données pour des entrées de données spécifiques. Un motif d'expression régulière insensible à la casse est utilisé pour améliorer la précision de la recherche, et les résultats sont présentés de manière claire sous forme de tableau.
+            </div>
+            <div class="item">
+                <h1><u>Représentation Graphique</u> </h1>
+                Les utilisateurs ont la possibilité de visualiser les données à travers des graphiques interactifs générés à l'aide de Matplotlib et Seaborn. Le système crée dynamiquement des graphiques linéaires en fonction des attributs de l'ensemble de données, offrant des informations précieuses sur les relations entre différentes variables.
+            </div>
+            <button id="next">></button>
+            <button id="prev"><</button>
+        </div>
+    
+        <script src="/static/about.js"></script>
+    </body>
+    </html>

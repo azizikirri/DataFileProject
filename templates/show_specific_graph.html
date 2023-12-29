@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ name }} - Graph</title>
+</head>
+<body>
+    <h1>{{ name }} - Graph</h1>
+    
+    {% if graph_img %}
+        <img  src="data:image/png;base64,{{ graph_img }}" alt="Graph for {{ name }}">
+    {% else %}
+        <p>No data found for {{ name }}</p>
+    {% endif %}
+</body>
+</html>

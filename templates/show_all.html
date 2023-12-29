@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ALL DATA</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='show_all.css') }}">
+</head>
+<body>
+    <main class="table" id="customers_table">
+        <section class="table__header">          
+            <div class="firstchild">
+                <form action="/search" method="post">
+                    <input type="text" name="place_name" required placeholder="Search Data...">
+                    <input class="btn-search" type="submit" name="search_type" value="Search">
+                </form>
+            </div>
+            <button class="buttonDownload" >
+                <a class="pdf-link" href="{{ url_for('download_pdf') }}"  target="_blank" download="report.pdf">Download</a>
+            </button>
+
+        <button class="ui-btn">
+            <a class="pdf-link" href="{{ url_for('show_graph') }}">
+                <span>Show Graph</span>
+            </a>
+            
+        </button>
+        </section>
+        <section class="table__body">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Localites</th>
+                        <th>N° IRE</th>
+                        <th class="x">X</th>
+                        <th class="y">Y</th>
+                        <th>PT SOL</th>
+                        <th>Q</th>
+                        <th>K</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for data in all_data %}
+                        <tr>
+                            <td>{{ data.name }}</td>
+                            <td>{{ data.localites }}</td>
+                            <td>{{ data.n_ire }}</td>
+                            <td class="x {{ loop.cycle('odd', 'even') }}">{{ data.x }}</td>
+                            <td class="y {{ loop.cycle('odd', 'even') }}">{{ data.y }}</td>
+                            <td>{{ data.pt_sol }}</td>
+                            <td>{{ data.q }}</td>
+                            <td>{{ data.k }}</td>
+                        </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </section>
+    </main>
+    
+</body>
+</html>

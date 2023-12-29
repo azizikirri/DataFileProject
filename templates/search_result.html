@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search Result</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='search_result.css') }}">
+</head>
+<body>
+    <main class="table" id="customers_table">
+        <section class="table__header">
+          
+               <h1 class="text">Search Result</h1>
+          
+            <button class="buttonDownload">
+                <a class="pdf-link" href="{{ url_for('download_specific_pdf', name=results[0].name) }}" target="_blank" download="{{ results[0].name }}_report.pdf">Download</a></button>
+
+            <button class="ui-btn">
+                <a class="pdf-link" href="{{ url_for('show_specific_graph', name=results[0].name) }}">
+                    <span>Show Graph</span>
+                </a>
+            </button>          
+        </section>
+        <section class="table__body">
+            {% if results %}
+                <table>
+                    <!-- Table Header -->
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <th>Localites</th>
+                            <th>N° IRE</th>
+                            <th>X</th>
+                            <th>Y</th>
+                            <th>PT SOL</th>
+                            <th>Q</th>
+                            <th>K</th>
+                        </tr>
+                    </thead>
+                    <!-- Table Rows -->
+                    <tbody>
+                        {% for result in results %}
+                            <tr>
+                                <td>{{ result.name }}</td>
+                                <td>{{ result.localites }}</td>
+                                <td>{{ result.n_ire }}</td>
+                                <td>{{ result.x }}</td>
+                                <td>{{ result.y }}</td>
+                                <td>{{ result.pt_sol }}</td>
+                                <td>{{ result.q }}</td>
+                                <td>{{ result.k }}</td>
+                               
+                            </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+            </section>
+        </main>
+    {% else %}
+        <p>No results found.</p>
+    {% endif %}
+</body>
+</html>

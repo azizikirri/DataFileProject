@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='index.css') }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+    
+</head>
+<body>
+    
+    <div class="container">
+        <div class="header">
+            <img src="/static/images/logo.png" alt="" class="logo">
+            <ul >
+                <li>HOME</li>
+                <li>
+                    <form action="/show_all" method="get">
+                    <button class="showbtn" type="submit" name="show_all">ALL DATA</button>
+                </form>
+            </li>
+            <li><a class="about-link" href="{{ url_for('about') }}">ABOUT</a></li>
+            </ul>
+        </div>
+        <div id="slide">
+            <div class="item">
+                <div class="image">
+                    <img src="/static/images/img1_all_data.PNG">
+                </div>
+                <div class="content">
+                    <div class="left">
+                        <h1 class="all">All <span>Data</span> </h1>
+                        <div class="des"><p class="alldata">Should you wish to retrieve or <br>visualize a comprehensive <br>dataset the option is available <br> for download or 
+                            display in <br>the form of a chart.Additionally <br> for targeted data retrieval <br> search functionality is provided <br> enabling users to access specific <br>data  by name.</p></div>
+                    </div>
+                    <div class="right">
+                        <h2>All Data</h2>
+                        <ul>
+                            <li>
+                                <p>Show All</p>
+                                <p>2023</p>
+                            </li>
+                            <li>
+                                <p>Download All</p>
+                                <p>2023</p>
+                            </li>
+                            <li>
+                                <p>show Graph</p>
+                                <p>2023</p>
+                            </li>
+                        </ul>
+                    </div>
+
+                </div>
+            </div>
+            
+             <div class="item">
+                <div class="image">
+                    <img src="/static/images/img1_all_data.PNG">
+                </div>
+                <div class="content">
+                    <div class="left">
+                        <h1 class="all">All <span>Data</span> </h1>
+                        <div class="des"><p class="alldata">Should you wish to retrieve or <br>visualize a comprehensive <br>dataset the option is available <br> for download or 
+                             display in <br>the form of a chart.Additionally <br> for targeted data retrieval <br> search functionality is provided <br> enabling users to access specific <br>data  by name.</p></div>
+                    </div>
+                    <div class="right">
+                        <h2>All Data</h2>
+                        <ul>
+                            <li>
+                                <p>Show All</p>
+                                <p>2023</p>
+                            </li>
+                            <li>
+                                <p>Download All</p>
+                                <p>2023</p>
+                            </li>
+                            <li>
+                                <p>show Graph</p>
+                                <p>2023</p>
+                            </li>
+                        </ul>
+                    </div>
+
+                </div>
+            </div>
+            <div class="item">
+                <div class="image">
+                    <img  src="/static/images/img2_all_data.PNG">
+                </div>
+                <div class="content">
+                    <div class="left">
+                        <h1 class="mongo">All <span>Data</span><br> Graph</h1>
+                        <p class="des">You can <br> click the show graph <br>  button to show a graph <br> of all the data</p>
+                        
+                    </div>
+                    <div class="right">
+                        <h2>All Graph</h2>
+                        <ul>
+                            <li>
+                                <p>All data Graph</p>
+                                <p>2023</p>
+                            </li>
+                            <li>
+                                <p>Download all</p>
+                                <p>2023</p>
+                            </li>
+                            <li>
+                                <p>X in terms of Y</p>
+                                <p>2023</p>
+                            </li>
+                        </ul>
+                    </div>
+
+                </div>
+            </div>
+             <div class="item">
+                <div class="image">
+                    <img src="/static/images/img3_search_spesiphic.PNG">
+                </div>
+                <div class="content">
+                    <div class="left">
+                        <h1 class="mongo">Specific <span>Data</span></h1>
+                        <p class="des">Specific data by<br> Searching by name</p>
+                        
+                    </div>
+                    <div class="right">
+                        <h2>Specific data</h2>
+                        <ul>
+                            <li>
+                                <p>Searching by name</p>
+                                <p>2023</p>
+                            </li>
+                            <li>
+                                <p>Download</p>
+                                <p>2023</p>
+                            </li>
+                            <li>
+                                <p>Show graph</p>
+                                <p>2023</p>
+                            </li>
+                        </ul>
+                    </div>
+
+                </div>
+            </div>
+            <div class="item">
+                <div class="image">
+                    <img src="/static/images/img4_spi_graph.PNG">
+                </div>
+                <div class="content">
+                    <div class="left">
+                        <h1 class="mongo">Specific <span>Data</span><br> Graph</h1>
+                        <p class="des">You can locate<br>a graph <br>for specific data <br>by searching by name</p>
+                        
+                    </div>
+                    <div class="right">
+                        <h2>Specific Graph</h2>
+                        <ul>
+                            <li>
+                                <p>Show graph</p>
+                                <p>2023</p>
+                            </li>
+                            <li>
+                                <p>Specific name</p>
+                                <p>2023</p>
+                            </li>
+                            <li>
+                                <p>X in terms of Y</p>
+                                <p>2023</p>
+                            </li>
+                        </ul>
+                    </div>
+
+                </div>
+            </div>
+            
+        </div>
+        <div class="directional">
+            <button id="prev"><i class="fa-solid fa-angle-left"></i></button>
+            <button id="next"><i class="fa-solid fa-angle-right"></i></button>
+        </div>
+    </div>
+    
+    <script src="{{ url_for('static', filename='index.js') }}"></script>
+    
+</body>
+</html>
+  

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Graph</title>
+    <style>
+        body {
+            text-align: center;
+        }
+
+        img {
+            max-width: 80%;
+            height: auto;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    {% if graph_img %}
+        <img src="data:image/png;base64,{{ graph_img }}" alt="Graph">
+        <div style="margin-top: 10px;">
+            <p>Legend:</p>
+            <p>X vs Y</p>
+        </div>
+    {% else %}
+        <p>No data available for the graph.</p>
+    {% endif %}
+</body>
+</html>
+
