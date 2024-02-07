@@ -32,7 +32,7 @@ def load_excel_data():
         # Check if data already exists in the collection
         if collection.count_documents({}) == 0:
             print("test")
-            excel_data = pd.read_excel('datafile_soundages.xlsx')  # Use a relative path
+            excel_data = pd.read_excel('your_file')  # Use a relative path
 
             # Replace NaN values with 0 in the entire DataFrame
             excel_data.fillna(0, inplace=True)
